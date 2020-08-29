@@ -1,0 +1,32 @@
+{
+	"defaultLocale":"en",
+	"identifier": "com.elony314.keybinding",
+	"author": "elony314",
+	"description": "A collection of actions (scripts) for key bindings.",
+	"version": "1.0",
+	"actions": [
+		{
+            "identifier": "due_date_plus_1"
+		},
+		{
+			"identifier": "due_date_minus_1"
+		},
+		{
+            "identifier": "defer_date_plus_1"
+		},
+		{
+			"identifier": "defer_date_minus_1"
+		},
+		{
+			"identifier": "toggle_due_today"
+		},
+		{
+			"identifier": "toggle_defer_today"
+		}
+    ],
+    "libraries": [
+        {
+            "identifier": "date_lib"
+		}
+    ]
+}
