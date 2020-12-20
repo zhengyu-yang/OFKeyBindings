@@ -13,10 +13,14 @@
         selection.tasks.forEach(task => {
             m1due(task);
         });
+        selection.projects.forEach(proj => {
+            m1due(proj);
+        });
+
     });
     
     action.validate = (selection, sender) => {
-        return (app.platformName === "macOS" && selection.tasks.length > 0);
+        return (app.platformName === "macOS" && (selection.tasks.length > 0 || selection.projects.length > 0));
     };
     
     return action;

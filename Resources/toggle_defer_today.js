@@ -23,10 +23,14 @@
         selection.tasks.forEach(task => {
             toggle(task);
         });
+        selection.projects.forEach(proj => {
+            toggle(proj);
+        });
+
     });
     
     action.validate = (selection, sender) => {
-        return (app.platformName === "macOS" && selection.tasks.length > 0);
+        return (app.platformName === "macOS" && (selection.tasks.length > 0 || selection.projects.length > 0));
     };
     
     return action;

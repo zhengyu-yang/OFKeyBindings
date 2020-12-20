@@ -13,10 +13,13 @@
         selection.tasks.forEach(task => {
             p1defer(task);
         });
+        selection.projects.forEach(proj => {
+            p1defer(proj);
+        });
     });
     
     action.validate = (selection, sender) => {
-        return (app.platformName === "macOS" && selection.tasks.length > 0);
+        return (app.platformName === "macOS" && (selection.tasks.length > 0 || selection.projects.length > 0));
     };
     
     return action;
