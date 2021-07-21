@@ -11,6 +11,12 @@
                 break;
             }
         }
+        for(const proj of selection.projects){
+            if(proj.dueDate instanceof Date){
+                all_null = false;
+                break;
+            }
+        }
         
         async function toggle(task){
             if(!all_null){
